@@ -45,8 +45,9 @@
 
 /* 슬라이더*/
 
-.mainvisual .itm {
-    height: 100vh;
+.itm {
+    height: 800px;
+
 }
 
 .mainvisual .itm01 {
@@ -69,19 +70,165 @@
     background: url(../images/section01_img05.jpg)no-repeat center center/cover;
 }
 
+
+
+
+.mainvisual .itm {
+    position: relative;
+    object-fit: cover;
+    background-size: auto 130%;
+}
+
+.mainvisual .itm.on {
+    background-size: auto 100%;
+    transition: 4s;
+}
+
+.mainvisual .mainslide .slick-dots {
+    position: absolute;
+
+
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+
+
+
+}
+
+.mainvisual .mainslide .slick-dots>li {
+    display: inline-block;
+    margin: 0px 12px;
+    width: 14px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.5);
+
+
+    border-radius: 50%;
+}
+
+.mainvisual .mainslide .slick-dots li.slick-active {
+    width: 18px;
+    height: 18px;
+    opacity: 1;
+    background: #fff;
+    margin: -2px 12px;
+}
+
+.mainvisual .mainslide .slick-dots button {
+    display: none;
+}
+
 .maincontent {
     padding: 100px 0;
 }
 
-.maincontent .content_box01 h2 {
+
+.maincontent .content_box01 {
+    display: flex;
+    justify-content: space-between;
     margin: 0 0 80px 0;
-    font-size: 70px;
+    align-items: center;
+
+}
+
+.maincontent .content_box01 i {
+    font-size: 26px;
+    font-weight: 500;
+    cursor: pointer;
+    transform: rotate();
+    transition: 0.5s;
+
+}
+
+.maincontent .content_box01 i:hover {
+
+    transform: rotate(180deg);
+}
+
+
+.maincontent .content_box01 h2 {
+    font-size: 55px;
     font-weight: 700;
+
+}
+
+.maincontent .content_box02 p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.maincontent .content_box02 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.maincontent .content_box02 img {
+    height: 300px;
+
+    margin: 0 0 15px 0;
 }
 
 
 
-.content_box02 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+.maintap {
+    padding: 100px 0;
+}
+
+
+.maintap .tap .tap_menu {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.1);
+
+
+
+}
+
+.maintap .tap .tap_menu li {
+
+    color: #333;
+    width: 388px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+
+
+}
+
+.maintap .tap .tap_menu li.on {
+    background: #111;
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+.maintap .tap .tap_detail {
+    margin: 0 0 40px 0;
+}
+
+
+.maintap .tap .tap_detail li {
+    height: 0;
+    overflow: hidden;
+}
+
+.maintap .tap .tap_detail li.on {
+    height: auto;
 }

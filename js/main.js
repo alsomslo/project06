@@ -8,20 +8,25 @@ $(function () {
 
     $('.mainslide').slick({
 
-        autoplay: 3000,
-        speed: 2000,
+        autoplay: 5000,
+        speed: 1000,
         dots: true,
         arrows: false,
 
     })
+    $('.mainslide').on('init afterChange', function (e, s, c) {
+        const current = $('.mainslide .slick-current');
+        current.addClass('on').siblings().removeClass('on');
 
-    /*
-    $('.mainmenu li').on('click', function (e) {
+
+    });
+    $('.maintap li').on('click', function (e) {
         e.preventDefault();
         let idx = $(this).index();
-        $('.mainmenu li').eq(idx).addClass('on').siblings().removeClass('on');
-        $('.pz_menu li').eq(idx).addClass('on').siblings().removeClass('on');
+        $('.maintap li').eq(idx).addClass('on').siblings().removeClass('on');
+        $('.tap_detail li').eq(idx).addClass('on').siblings().removeClass('on');
     })
 
-*/
+
+
 });

@@ -1,0 +1,140 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+}
+
+.header.on {
+    background: rgba(0, 0, 0, 0.7)
+}
+
+.header h1 {
+    width: 220px;
+}
+
+.header .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+
+}
+
+.gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.gnb a {
+    display: block;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header .custiomer_link {
+    width: 220px;
+}
+
+.header .custiomer_link a {
+    display: block;
+    white-space: nowrap;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+
+.mainvisual {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+
+
+}
+
+.mainvisual::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: #000;
+    opacity: 0.3;
+}
+
+.mainvisual .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+}
+
+.mainvisual h2 {
+    margin: 0 0 30px 0;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 2px #000;
+}
+
+.mainvisual h2 strong {
+    display: block;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.mainvisual h2 span {
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.mainvisual p {
+    max-width: 400px;
+    text-shadow: 0 0 3px #000;
+    font-size: 15px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+
+
+.mainvisual .mainslide .itm01 {
+    height: 100vh;
+    background: url(../images/bg_intro01.jpg )no-repeat center center/cover;
+}
+
+.mainvisual .mainslide .itm02 {
+    height: 100vh;
+    background: url(../images/bg_intro02.jpg )no-repeat center center/cover;
+}
+
+.mainvisual .mainslide .itm03 {
+    height: 100vh;
+    background: url(../images/bg_intro03.jpg )no-repeat center center/cover;
+}
+
+.mainvisual .slick-dots {
+    position: absolute;
+    bottom: 100px;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+}
+
+.aminvisual .slick-dots button {
+    display: none;
+}
+
+.mainvisual .slick-dots>li {
+    display: inline-block;
+
+}

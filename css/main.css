@@ -1,7 +1,13 @@
+h2 {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+
 .inner {
-    max-width: 1600px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 0 15px;
 }
 
 .header {
@@ -30,6 +36,7 @@
 
 .header .header_wrap {
     display: flex;
+    justify-content: space-between;
     height: 100px;
     align-items: center;
 }
@@ -40,7 +47,7 @@
 }
 
 .header .header_wrap .gnb ul>li {
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 /* 슬라이더*/
@@ -129,7 +136,7 @@
 .maincontent .content_box01 {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 80px 0;
+    margin: 0 0 60px 0;
     align-items: center;
 
 }
@@ -149,11 +156,7 @@
 }
 
 
-.maincontent .content_box01 h2 {
-    font-size: 55px;
-    font-weight: 700;
 
-}
 
 .maincontent .content_box02 p {
     font-size: 18px;
@@ -173,32 +176,39 @@
     margin: 0 0 15px 0;
 }
 
-
-
-
 .maintap {
     padding: 100px 0;
 }
 
+.maintap .tap {
+    position: relative;
+
+
+
+}
+
+
+
+
 
 .maintap .tap .tap_menu {
+
     display: flex;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.1);
-
-
+    background: #f9f9f9;
 
 }
 
 .maintap .tap .tap_menu li {
 
     color: #333;
-    width: 388px;
+    width: 100%;
     height: 70px;
     line-height: 70px;
     text-align: center;
     font-size: 26px;
     font-weight: 300;
+    border-left: 1px solid #ddd;
 
 
 }
@@ -212,16 +222,7 @@
 
 
 
-
-
-
-
-
-
-
-.maintap .tap .tap_detail {
-    margin: 0 0 40px 0;
-}
+.maintap .tap .tap_detail {}
 
 
 .maintap .tap .tap_detail li {
@@ -231,4 +232,101 @@
 
 .maintap .tap .tap_detail li.on {
     height: auto;
+}
+
+
+
+
+
+
+/*DINING*/
+
+.maindining {
+    padding: 100px 0;
+
+}
+
+.maindining .dining {}
+
+.maindining .dining .dining_wrapper {
+    display: flex;
+    background: linear-gradient(transparent 45%, #252525 30%);
+    padding: 0 0 100px 0;
+}
+
+
+.maindining .dining .dining_wrapper .title {
+    width: 300px;
+}
+
+.maindining .dining .dining_wrapper .title h2 {
+    margin: 0 0 30px 0;
+}
+
+.maindining .dining .dining_wrapper .title p {
+
+    font-size: 17px;
+    font-weight: 400;
+
+}
+
+.maindining .dining .dining_box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: calc(100% - 300px);
+    gap: 30px;
+}
+
+.maindining .dining .dining_box img {
+    margin: 0 0 40px 0;
+
+}
+
+.maindining .dining .dining_box h3 {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+.maindining .dining .dining_box p {
+
+    color: #999;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.mainwedding {
+    padding: 100px 0;
+}
+
+.mainwedding .wedding .title {
+    margin: 0 0 60px 0;
+}
+
+.mainwedding .wedding .wedding_wrapper .img_box {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 30px;
+}
+
+.mainwedding .wedding .wedding_wrapper .img_box .text {
+    position: absolute;
+    padding: 0 30px;
+    bottom: 40px;
+}
+
+.mainwedding .wedding .wedding_wrapper .img_box .text h3 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+}
+
+.mainwedding .wedding .wedding_wrapper .img_box .text p {
+    font-size: 18px;
+    color: #fff;
+    font-size: 400;
+    line-height: 1.6;
 }

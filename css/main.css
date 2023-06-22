@@ -180,7 +180,7 @@ h2 {
     padding: 100px 0;
 }
 
-.maintap .tap {
+.maintap .tap .top {
     position: relative;
 
 
@@ -191,38 +191,45 @@ h2 {
 
 
 
-.maintap .tap .tap_menu {
-
+.maintap .tap .top .tap_menu {
+    position: absolute;
+    top: 150px;
     display: flex;
-    justify-content: space-between;
-    background: #f9f9f9;
+    width: 100%;
+    gap: 30px;
 
 }
 
-.maintap .tap .tap_menu li {
-
-    color: #333;
+.maintap .tap .top .tap_menu li {
+    color: #999;
     width: 100%;
     height: 70px;
     line-height: 70px;
-    text-align: center;
+    text-align: left;
     font-size: 26px;
     font-weight: 300;
-    border-left: 1px solid #ddd;
-
+    border-top: 2px solid #999;
+    cursor: pointer;
 
 }
 
 .maintap .tap .tap_menu li.on {
-    background: #111;
     color: #fff;
+    border-top: 2px solid #fff;
     transition: 0.5s;
 }
 
 
 
 
-.maintap .tap .tap_detail {}
+
+
+
+
+.maintap .bottom .tap_detail .detail_box .text_box h3 {
+    font-size: 55px;
+    color: #fff;
+}
 
 
 .maintap .tap .tap_detail li {
@@ -329,4 +336,90 @@ h2 {
     color: #fff;
     font-size: 400;
     line-height: 1.6;
+}
+
+.footer .top {
+    background: #333;
+    padding: 80px 0;
+}
+
+.footer .top .top_box {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+
+
+.footer .top .top_box .ft {
+    padding: 30px 0 0 0;
+    font-weight: 300;
+
+
+
+
+
+}
+
+.footer .top .top_box .ft li {
+    color: #999;
+    line-height: 40px;
+    transition: 0.5s;
+}
+
+.footer .top .top_box .ft li:hover {
+    color: #fff;
+}
+
+.footer .bottom {
+    background: #111;
+    padding: 40px 0;
+}
+
+.footer .bottom .bottom_box .box01 {
+    display: flex;
+    margin: 0 0 30px 0;
+    gap: 30px;
+    color: #fff;
+}
+
+.footer .bottom .bottom_box .box02 {
+    margin: 0 0 30px 0;
+}
+
+.footer .bottom .bottom_box .box03 {
+    justify-content: space-between;
+    display: flex;
+    color: #888;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.footer .bottom .bottom_box .box03 ul {
+    display: flex;
+    gap: 26px;
+}
+
+.footer .bottom .bottom_box .box03 ul>li {
+    position: relative;
+}
+
+.footer .bottom .bottom_box .box03 ul>li~li::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(0, -50%);
+
+    height: 14px;
+    width: 1px;
+    background: #888;
+}
+
+.footer .bottom .bottom_box .box03 .icon {
+    color: #fff;
+    font-size: 30px;
 }

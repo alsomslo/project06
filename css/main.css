@@ -13,7 +13,7 @@ h2 {
 .header {
     position: fixed;
     top: 0;
-    background: transparent;
+    background: linear-gradient(to bottom, #000 5%, transparent 45%);
     width: 100%;
     color: #fff;
 
@@ -31,7 +31,6 @@ h2 {
 }
 
 
-
 .header img {}
 
 .header .header_wrap {
@@ -47,7 +46,7 @@ h2 {
 }
 
 .header .header_wrap .gnb ul>li {
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 /* 슬라이더*/
@@ -79,7 +78,6 @@ h2 {
 
 
 
-
 .mainvisual .itm {
     position: relative;
     object-fit: cover;
@@ -93,15 +91,10 @@ h2 {
 
 .mainvisual .mainslide .slick-dots {
     position: absolute;
-
-
     left: 50%;
     bottom: 40px;
     transform: translate(-50%, -50%);
     cursor: pointer;
-
-
-
 
 }
 
@@ -151,7 +144,6 @@ h2 {
 }
 
 .maincontent .content_box01 i:hover {
-
     transform: rotate(180deg);
 }
 
@@ -172,7 +164,6 @@ h2 {
 
 .maincontent .content_box02 img {
     height: 300px;
-
     margin: 0 0 15px 0;
 }
 
@@ -180,13 +171,11 @@ h2 {
     padding: 100px 0;
 }
 
+
 .maintap .tap .top {
     position: relative;
-
-
-
+    z-index: 998;
 }
-
 
 
 
@@ -195,20 +184,22 @@ h2 {
     position: absolute;
     top: 150px;
     display: flex;
+
     width: 100%;
     gap: 30px;
+    z-index: 999;
 
 }
 
 .maintap .tap .top .tap_menu li {
-    color: #999;
+    color: #888;
     width: 100%;
     height: 70px;
     line-height: 70px;
     text-align: left;
-    font-size: 26px;
-    font-weight: 300;
-    border-top: 2px solid #999;
+    font-size: 22px;
+    font-weight: 500;
+    border-top: 2px solid #888;
     cursor: pointer;
 
 }
@@ -219,26 +210,114 @@ h2 {
     transition: 0.5s;
 }
 
+.maintap .tap .bottom::before {
+    content: "";
+    position: absolute;
 
-
-
-
-
-
-
-.maintap .bottom .tap_detail .detail_box .text_box h3 {
-    font-size: 55px;
-    color: #fff;
+    display: block;
+    background: linear-gradient(to bottom, #000 5%, transparent 80%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }
+
+.maintap .tap .bottom {
+    position: relative;
+
+}
+
+.maintap .bottom .tap_detail .detail_box {
+    position: relative;
+}
+
+
+
+.maintap .bottom .tap_detail .detail_box .text_box {
+    position: absolute;
+    top: 300px;
+    z-index: 999;
+
+}
+
+.maintap .bottom h3 {
+    font-size: 55px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 30px 0;
+
+}
+
+.maintap .bottom p {
+    margin: 0 0 30px 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.maintap .bottom strong {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    margin: 0 0 15px 0;
+
+}
+
+.maintap .bottom span {
+    position: relative;
+    display: block;
+
+    color: #fff;
+    line-height: 40px;
+    margin: 0 0 0 15px;
+
+
+}
+
+
+.maintap .bottom span::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    left: -15px;
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.maintap .bottom .text .text_box a {
+
+    display: inline-block;
+    margin: 50px 0;
+    color: #fff;
+    border: 1px solid #999;
+    padding: 12px 40px;
+    transition: 0.5s;
+
+
+}
+
+.maintap .bottom .text .text_box a:hover {
+    border: none;
+    background: #ac8956;
+}
+
+
+
 
 
 .maintap .tap .tap_detail li {
     height: 0;
     overflow: hidden;
+
 }
 
 .maintap .tap .tap_detail li.on {
     height: auto;
+
 }
 
 
@@ -257,7 +336,7 @@ h2 {
 
 .maindining .dining .dining_wrapper {
     display: flex;
-    background: linear-gradient(transparent 45%, #252525 30%);
+    background: linear-gradient(transparent 45%, #222 30%);
     padding: 0 0 100px 0;
 }
 
@@ -299,7 +378,7 @@ h2 {
 .maindining .dining .dining_box p {
 
     color: #999;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.7;
 }
 
@@ -382,7 +461,13 @@ h2 {
     display: flex;
     margin: 0 0 30px 0;
     gap: 30px;
+    font-size: 14px;
+    font-weight: 400;
     color: #fff;
+}
+
+.footer .bottom .bottom_box .box01 strong {
+    font-weight: 500;
 }
 
 .footer .bottom .bottom_box .box02 {
@@ -393,6 +478,8 @@ h2 {
     justify-content: space-between;
     display: flex;
     color: #888;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     line-height: 1.4;
 }

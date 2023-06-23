@@ -235,7 +235,7 @@ h2 {
 .maintap .bottom .tap_detail .detail_box .text_box {
     position: absolute;
     top: 300px;
-    z-index: 999;
+    z-index: 998;
 
 }
 

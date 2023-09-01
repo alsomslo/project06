@@ -27,6 +27,24 @@ $(function () {
         $('.tap_detail li').eq(idx).addClass('on').siblings().removeClass('on');
     })
 
+    $('.menu').on('click', function () {
+        $('.gnb').addClass('on');
+
+    });
+
+    $('.close').on('click', function () {
+        $('.gnb').removeClass('on')
+
+    })
+    $('.gnb>ul>li>a').on('click', function (e) {
+        e.preventDefault();
+        $(this).next().stop().slideDown();
+        $(this).parent().siblings().find('.sub').stop().slideUp();
+    });
+
+    $(window).on('resize', function () {
+        $('.gnb .sub').removeAttr('style')
+    })
 
 
 });

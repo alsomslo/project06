@@ -5,7 +5,7 @@ h2 {
 
 
 .inner {
-    max-width: 1440px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -31,22 +31,81 @@ h2 {
 }
 
 
-.header img {}
+
 
 .header .header_wrap {
     display: flex;
     justify-content: space-between;
     height: 100px;
     align-items: center;
+
 }
 
-.header .header_wrap .gnb ul {
+.header .menu {
+    display: none;
+}
+
+.header .m_gnb_logo {
+    display: none;
+}
+
+.header .close {
+    display: none;
+}
+
+
+
+.header .header_wrap .gnb>ul {
     display: flex;
 
+
 }
 
-.header .header_wrap .gnb ul>li {
-    padding: 0 15px;
+.header .header_wrap .gnb>ul>li {
+
+    position: relative;
+    line-height: 100px;
+    padding: 0 25px;
+
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    color: #fff;
+
+}
+
+.header .header_wrap .gnb>ul>li .sub {
+    position: absolute;
+
+    left: 50%;
+    top: 100px;
+    width: auto;
+    padding: 20px 30px 20px 30px;
+    transform: translate(-50%, 0);
+    background: rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    text-align: center;
+    visibility: hidden;
+    line-height: 30px;
+    opacity: 0;
+    transition: 0.3s;
+
+}
+
+.header .header_wrap .gnb>ul>li:hover .sub {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.header .header_wrap .gnb>ul>li .sub>li>a {
+    color: #ddd;
+    transition: 0.5s;
+}
+
+.header .header_wrap .gnb>ul>li .sub>li>a:hover {
+    color: #fff;
 }
 
 /* 슬라이더*/
@@ -100,9 +159,9 @@ h2 {
 
 .mainvisual .mainslide .slick-dots>li {
     display: inline-block;
-    margin: 0px 12px;
-    width: 14px;
-    height: 14px;
+    margin: 0px 8px;
+    width: 12px;
+    height: 12px;
     background: rgba(255, 255, 255, 0.5);
 
 
@@ -110,11 +169,10 @@ h2 {
 }
 
 .mainvisual .mainslide .slick-dots li.slick-active {
-    width: 18px;
-    height: 18px;
+
     opacity: 1;
     background: #fff;
-    margin: -2px 12px;
+
 }
 
 .mainvisual .mainslide .slick-dots button {
@@ -228,6 +286,10 @@ h2 {
 
 .maintap .bottom .tap_detail .detail_box {
     position: relative;
+}
+
+.maintap .bottom .tap_detail .detail_box img {
+    height: 100vh;
 }
 
 
@@ -509,4 +571,661 @@ h2 {
 .footer .bottom .bottom_box .box03 .icon {
     color: #fff;
     font-size: 30px;
+}
+
+
+@media(max-width:768px) {
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+
+    .inner {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .header {
+        z-index: 1000;
+    }
+
+    .header.on {
+        background: #111;
+
+    }
+
+    .header:hover {
+        background: #111;
+    }
+
+
+
+
+    .header .header_wrap {
+        display: flex;
+
+        height: 100px;
+        align-items: center;
+
+    }
+
+    .header .header_wrap .menu {
+        display: block;
+        font-size: 40px;
+
+
+    }
+
+
+
+    .header .header_wrap .m_gnb_logo {
+        display: block;
+        z-index: 999;
+        padding: 0 0 50px 25px;
+    }
+
+    .header .gnb {
+        position: fixed;
+        inset: 0 auto 0 0;
+        width: 100%;
+        background: #333;
+        visibility: hidden;
+
+        padding: 40px 0 0 0;
+        z-index: 999;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .header .gnb.on {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+
+    .header .header_wrap .gnb>ul {
+
+        align-items: start;
+        flex-direction: column;
+
+
+
+    }
+
+    .header .header_wrap .gnb>ul>li {
+
+        position: relative;
+        line-height: 70px;
+        padding: 0 25px;
+        height: none;
+        padding: 0 25px;
+        font-size: 20px;
+        font-weight: 500;
+
+    }
+
+    .header .header_wrap .gnb>ul>li>a {
+        display: block;
+        font-size: 20px;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .header .header_wrap .gnb>ul>li .sub {
+        position: static;
+        background: none;
+        padding: 0 0 0 0;
+
+
+        text-align: left;
+        font-size: 16px;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        transition: 0s;
+        display: none;
+
+    }
+
+    .header .header_wrap .gnb>ul>li:hover .sub {
+        display: none;
+
+    }
+
+    .header .header_wrap .gnb>ul>li .sub>li>a {
+        color: #ddd;
+        transition: 0.5s;
+    }
+
+    .header .header_wrap .gnb>ul>li .sub>li>a:hover {
+        color: #fff;
+    }
+
+    .header .close {
+        display: block;
+        position: absolute;
+        top: 32px;
+        right: 20px;
+
+
+
+
+        font-size: 30px;
+    }
+
+    /* 슬라이더*/
+
+    .itm {
+        height: 500px;
+
+    }
+
+    .mainvisual .itm01 {
+        background: url(../images/section01_img01.jpg)no-repeat center center/cover;
+    }
+
+    .mainvisual .itm02 {
+        background: url(../images/section01_img02.jpg)no-repeat center center/cover;
+    }
+
+    .mainvisual .itm03 {
+        background: url(../images/section01_img03.jpg)no-repeat center center/cover;
+    }
+
+    .mainvisual .itm04 {
+        background: url(../images/section01_img04.jpg)no-repeat center center/cover;
+    }
+
+    .mainvisual .itm05 {
+        background: url(../images/section01_img05.jpg)no-repeat center center/cover;
+    }
+
+
+
+    .mainvisual .itm {
+        position: relative;
+        object-fit: cover;
+        background-size: auto 130%;
+    }
+
+    .mainvisual .itm.on {
+        background-size: auto 100%;
+        transition: 4s;
+    }
+
+    .mainvisual .mainslide .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+    }
+
+    .mainvisual .mainslide .slick-dots>li {
+        display: inline-block;
+        margin: 0px 8px;
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.5);
+
+
+        border-radius: 50%;
+    }
+
+    .mainvisual .mainslide .slick-dots li.slick-active {
+
+        opacity: 1;
+        background: #fff;
+
+    }
+
+    .mainvisual .mainslide .slick-dots button {
+        display: none;
+    }
+
+    .maincontent {
+        padding: 40px 0;
+    }
+
+
+    .maincontent .content_box01 {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 30px 0;
+        align-items: center;
+
+    }
+
+    .maincontent .content_box01 i {
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        transform: rotate();
+        transition: 0.5s;
+
+    }
+
+    .maincontent .content_box01 i:hover {
+        transform: rotate(180deg);
+    }
+
+
+
+
+    .maincontent .content_box02 p {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+
+    .maincontent .content_box02 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .maincontent .content_box02 img {
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+
+        margin: 0 0 15px 0;
+    }
+
+    .maintap {
+        padding: 40px 0;
+    }
+
+
+    .maintap .tap .top {
+        position: relative;
+        z-index: 998;
+    }
+
+
+
+
+    .maintap .tap .top .tap_menu {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        padding: 0 0 0 0;
+        width: 100%;
+        gap: 0;
+        z-index: 999;
+        min-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+
+
+    }
+
+    .maintap .tap .top .tap_menu li {
+        color: #888;
+        width: 100%;
+        height: 30px;
+        line-height: 1.2;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        border-top: 1px solid #ddd;
+
+        border-right: 1px solid #ddd;
+        cursor: pointer;
+        display: flex;
+        flex-basis: calc(50% - 40px);
+        justify-content: center;
+        flex-direction: column;
+
+
+    }
+
+    .maintap .tap .top .tap_menu .me01,
+    .maintap .tap .top .tap_menu .me03 {
+        border-left: 1px solid #ddd;
+    }
+
+    .maintap .tap .top .tap_menu .me03,
+    .maintap .tap .top .tap_menu .me04 {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .maintap .tap .tap_menu li.on {
+        color: #fff;
+        border-top: 1px solid #ddd;
+        transition: 0.5s;
+    }
+
+    .maintap .tap .bottom::before {
+        content: "";
+        position: absolute;
+
+        display: block;
+        background: linear-gradient(to bottom, #000 5%, transparent 80%);
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    .maintap .tap .bottom {
+        position: relative;
+
+    }
+
+    .maintap .bottom .tap_detail .detail_box {
+        position: relative;
+    }
+
+    .maintap .bottom .tap_detail .detail_box img {
+        height: 400px;
+        object-fit: cover;
+    }
+
+
+
+    .maintap .bottom .tap_detail .detail_box .text_box {
+        position: absolute;
+        top: 100px;
+        left: 40px;
+        z-index: 998;
+
+    }
+
+    .maintap .bottom h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+        margin: 0 0 15px 0;
+
+    }
+
+    .maintap .bottom p {
+        margin: 0 0 15px 0;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .maintap .bottom strong {
+        display: block;
+        font-size: 12px;
+        color: #fff;
+        margin: 0 0 10px 0;
+
+    }
+
+    .maintap .bottom span {
+        position: relative;
+        display: block;
+        font-size: 12px;
+        color: #fff;
+        line-height: 30px;
+        margin: 0 0 0 15px;
+
+
+    }
+
+
+    .maintap .bottom span::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        left: -15px;
+        width: 3px;
+        height: 3px;
+        background: #fff;
+        border-radius: 50%;
+    }
+
+    .maintap .bottom .text .text_box a {
+
+        display: inline-block;
+        margin: 5px 0;
+        color: #fff;
+        border: 1px solid #999;
+        padding: 10px 26px;
+        font-size: 12px;
+        transition: 0.5s;
+
+
+    }
+
+    .maintap .bottom .text .text_box a:hover {
+        border: none;
+        background: #ac8956;
+    }
+
+
+
+
+
+    .maintap .tap .tap_detail li {
+        height: 0;
+        overflow: hidden;
+
+    }
+
+    .maintap .tap .tap_detail li.on {
+        height: auto;
+
+    }
+
+
+
+
+
+
+    /*DINING*/
+
+    .maindining {
+        padding: 40px 0;
+
+    }
+
+    .maindining .dining {}
+
+    .maindining .dining .dining_wrapper {
+        display: flex;
+        background: none;
+        flex-direction: column;
+        padding: 0 0 0 0;
+
+    }
+
+
+    .maindining .dining .dining_wrapper .title {
+        width: 300px;
+        margin: 0 0 20px 0;
+    }
+
+    .maindining .dining .dining_wrapper .title h2 {
+        margin: 0 0 20px 0;
+    }
+
+    .maindining .dining .dining_wrapper .title p {
+
+        font-size: 15px;
+        font-weight: 400;
+
+    }
+
+    .maindining .dining .dining_box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        gap: 50px;
+
+
+    }
+
+    .maindining .dining .dining_box img {
+        margin: 0 0 30px 0;
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+    .maindining .dining .dining_box h3 {
+        font-size: 24px;
+        color: #000;
+        font-weight: 500;
+        margin: 0 0 10px 0;
+    }
+
+    .maindining .dining .dining_box p {
+        font-size: 14px;
+        color: #999;
+        font-weight: 400;
+        line-height: 1.7;
+    }
+
+    .mainwedding {
+        padding: 40px 0;
+    }
+
+    .mainwedding .wedding .title {
+        margin: 0 0 60px 0;
+    }
+
+    .mainwedding .wedding .wedding_wrapper .img_box {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+
+    }
+
+    .mainwedding .wedding .wedding_wrapper .img_box .wed {
+        position: relative;
+    }
+
+    .mainwedding .wedding .wedding_wrapper .img_box .text {
+
+        padding: 0 30px;
+        bottom: 40px;
+    }
+
+    .mainwedding .wedding .wedding_wrapper .img_box .text h3 {
+        font-size: 20px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0 0 30px 0;
+    }
+
+    .mainwedding .wedding .wedding_wrapper .img_box .text p {
+        font-size: 14px;
+        color: #fff;
+        font-size: 400;
+        line-height: 1.6;
+    }
+
+    .footer .top {
+        display: none;
+        background: #333;
+        padding: 80px 0;
+    }
+
+    .footer .top .top_box {
+        color: #fff;
+        display: none;
+        justify-content: space-between;
+        text-align: center;
+
+    }
+
+
+
+    .footer .top .top_box .ft {
+        padding: 30px 0 0 0;
+        font-weight: 300;
+
+
+
+
+
+    }
+
+    .footer .top .top_box .ft li {
+        color: #999;
+        line-height: 40px;
+        transition: 0.5s;
+    }
+
+    .footer .top .top_box .ft li:hover {
+        color: #fff;
+    }
+
+    .footer .bottom {
+        background: #111;
+        padding: 40px 0;
+    }
+
+    .footer .bottom .bottom_box .box01 {
+        display: flex;
+        margin: 0 0 30px 0;
+        gap: 15px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #fff;
+        white-space: nowrap;
+    }
+
+    .footer .bottom .bottom_box .box01 strong {
+        font-weight: 700;
+    }
+
+    .footer .bottom .bottom_box .box02 {
+        margin: 0 0 30px 0;
+    }
+
+    .footer .bottom .bottom_box .box03 {
+        display: flex;
+        flex-direction: column;
+        color: #888;
+        justify-content: space-between;
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+
+    .footer .bottom .bottom_box .box03 ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0 0 15px 0;
+    }
+
+    .footer .bottom .bottom_box .box03 ul>li {
+        position: relative;
+    }
+
+    .footer .bottom .bottom_box .box03 ul>li~li::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: -15px;
+        transform: translate(0, -50%);
+
+        height: 14px;
+        width: 1px;
+        background: #888;
+    }
+
+    .footer .bottom .bottom_box .box03 .icon {
+        color: #fff;
+        font-size: 30px;
+    }
 }
